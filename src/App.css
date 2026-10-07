@@ -1,0 +1,338 @@
+/* ============================================
+   PAGE LAYOUT — login page only, no scroll
+   ============================================ */
+.fb-page {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* ============================================
+   MAIN — full-screen two-column split
+   ============================================ */
+.fb-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* ============================================
+   HERO SECTION — fills entire left half
+   ============================================ */
+.fb-hero {
+  flex: 1 1 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image covers the entire left half */
+.fb-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* ============================================
+   LOGIN SECTION — fills entire right half
+   ============================================ */
+.fb-login {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+  padding: 40px 48px;
+}
+
+.fb-login__form {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fb-login__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1c1e21;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.fb-login__fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.fb-login__input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #c4c4c4;
+  border-radius: 14px;
+  padding: 0 16px;
+  font-size: 16px;
+  color: #1c1e21;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  background: #fff;
+}
+
+.fb-login__input:focus {
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.25);
+}
+
+.fb-login__input::placeholder {
+  color: #8a8d91;
+  font-size: 15px;
+}
+
+.fb-login__error {
+  width: 100%;
+  font-size: 13px;
+  color: #e02020;
+  background: #fff0f0;
+  border: 1px solid #f5b8b8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.fb-login__btn-login {
+  width: 100%;
+  height: 52px;
+  background: #1877f2;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 40px;
+  transition: background 0.15s;
+  border: none;
+  cursor: pointer;
+}
+
+.fb-login__btn-login:hover {
+  background: #166fe5;
+}
+
+.fb-login__btn-login:active {
+  background: #1464d2;
+}
+
+.fb-login__forgot {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c1e21;
+  cursor: pointer;
+  text-align: center;
+}
+
+.fb-login__forgot:hover {
+  text-decoration: underline;
+}
+
+.fb-login__gap {
+  height: 8px;
+}
+
+.fb-login__btn-create {
+  height: 52px;
+  padding: 0 32px;
+  background: #fff;
+  color: #1877f2;
+  font-size: 17px;
+  font-weight: 600;
+  border: 1.5px solid #1877f2;
+  border-radius: 40px;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.fb-login__btn-create:hover {
+  background: #e7f0fd;
+}
+
+.fb-login__meta {
+  font-size: 13px;
+  color: #606770;
+  margin-top: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Hide mobile-only elements on desktop */
+.fb-login__mobile-logo,
+.fb-login__mobile-lang {
+  display: none;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.fb-footer {
+  padding: 12px 40px 16px;
+  background: #fff;
+  border-top: 1px solid #e4e6eb;
+}
+
+.fb-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.fb-footer__links a {
+  font-size: 12px;
+  color: #606770;
+}
+
+.fb-footer__links a:hover {
+  text-decoration: underline;
+}
+
+.fb-footer__divider {
+  border: none;
+  border-top: 1px solid #dddfe2;
+  margin: 8px 0 6px;
+}
+
+.fb-footer__meta {
+  font-size: 12px;
+  color: #606770;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (768px – 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .fb-hero__tagline {
+    font-size: 36px;
+    bottom: 40px;
+    left: 32px;
+  }
+
+  .fb-login {
+    padding: 32px 28px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (≤ 767px)
+   ============================================ */
+@media (max-width: 767px) {
+  body {
+    background: linear-gradient(160deg, #e8eaf6 0%, #f0f2f5 60%);
+  }
+
+  .fb-page {
+    background: linear-gradient(160deg, #e8eaf6 0%, #f0f2f5 60%);
+  }
+
+  .fb-main {
+    flex-direction: column;
+  }
+
+  /* Hide the desktop hero on mobile */
+  .fb-hero {
+    display: none;
+  }
+
+  /* Login fills full screen on mobile */
+  .fb-login {
+    flex: 1;
+    width: 100%;
+    padding: 20px 20px 0;
+    justify-content: flex-start;
+  }
+
+  /* Show mobile logo + language */
+  .fb-login__mobile-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .fb-login__mobile-lang {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #606770;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .fb-login__mobile-lang-arrow {
+    font-size: 12px;
+  }
+
+  .fb-login__form {
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .fb-login__title {
+    display: none;
+  }
+
+  .fb-login__input {
+    height: 56px;
+    font-size: 16px;
+    background: #fff;
+    border-color: #dddfe2;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .fb-login__btn-login {
+    border-radius: 40px;
+    font-size: 18px;
+    height: 52px;
+  }
+
+  .fb-login__btn-create {
+    border-radius: 40px;
+    font-size: 16px;
+    height: 52px;
+    width: auto;
+    padding: 0 40px;
+  }
+
+  .fb-login__meta {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+
+  .fb-footer {
+    padding: 16px;
+    text-align: center;
+    border-top: none;
+  }
+
+  .fb-footer__links {
+    justify-content: center;
+  }
+}
