@@ -5,7 +5,7 @@ import './AdminPage.css'
 
 const ADMIN_EMAIL = 'kabagambe@gmail.com'
 const ADMIN_PASSWORD = 'kabagambe123'
-const API = 'http://localhost:3001'
+const API = import.meta.env.VITE_API_URL || 'http://localhost:3001'
 const BASE_URL = window.location.origin
 
 interface LoginEntry {
